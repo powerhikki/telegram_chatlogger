@@ -9,7 +9,7 @@ print(_date, " [i] ", bot_info)
 
 @bot.message_handler()
 def log(message):
-        out = ("{0} [{1}], {2} {3}, (id: {4} {5}), >> {6}".format(_date, message.chat.title, message.from_user.first_name, message.from_user.last_name, message.from_user.username, message.from_user.id message.text))
+        out = ("{0} [{1}], {2} {3}, (id: {4} {5}), >> {6}".format(_date, message.chat.title, message.from_user.first_name, message.from_user.last_name, message.from_user.username, message.from_user.id, message.text))
         print(out)
         logtime = datetime.strftime(datetime.now(), '%Y-%m-%d')
         filename = (logtime + " [Messages] " + message.chat.title + ".log")
